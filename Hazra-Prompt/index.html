@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hazra Prompt - Master AI, Prompt Engineering, Claude 3.5 Sonnet, ChatGPT-4o, and AI Agent Workflows.">
+  <title>Hazra Prompt | Advanced AI & Prompt Engineering Masterclass</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="header">
+    <div class="container nav-box">
+      <a href="#" class="brand">
+        <span class="ai-orb"></span>
+        <span class="brand-text">HAZRA <span class="neon-highlight">PROMPT</span></span>
+      </a>
+      <nav class="nav-menu">
+        <a href="#playground">Interactive Prompt</a>
+        <a href="#curriculum">AI Modules</a>
+        <a href="#tools">Supported LLMs</a>
+        <a href="#pricing">Tuition</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <button class="btn btn-neon open-modal-btn" data-plan="Hazra Prompt AI Masterclass">Join Cohort</button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container hero-layout">
+      <div class="hero-left">
+        <div class="ai-badge">
+          <span class="pulse-emerald"></span>
+          <span>Claude 3.5 • GPT-4o • Midjourney • AI Agents</span>
+        </div>
+        <h1 class="hero-heading">
+          Stop Guessing Prompts. <br>
+          <span class="neon-gradient">Engineer Superintelligence.</span>
+        </h1>
+        <p class="hero-intro">
+          Hazra Prompt is the definitive masterclass on Chain-of-Thought prompting, contextual LLM steering, multi-agent frameworks, and autonomous workflow automation.
+        </p>
+
+        <div class="hero-buttons">
+          <button class="btn btn-neon btn-lg open-modal-btn" data-plan="Hazra Prompt AI Masterclass">
+            Enroll in Hazra Prompt &rarr;
+          </button>
+          <a href="#playground" class="btn btn-glass btn-lg">
+            Test Prompt Simulator
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div><strong>10,000+</strong> Production Prompts</div>
+          <span class="divider">/</span>
+          <div><strong>4.98 ★</strong> Rating</div>
+          <span class="divider">/</span>
+          <div><strong>2,100+</strong> AI Operators</div>
+        </div>
+      </div>
+
+      <!-- Interactive Prompt Playground Card -->
+      <div class="hero-right" id="playground">
+        <div class="terminal-card">
+          <div class="terminal-bar">
+            <div class="window-controls">
+              <span class="circle red"></span>
+              <span class="circle yellow"></span>
+              <span class="circle green"></span>
+            </div>
+            <span class="terminal-title">hazra-prompt-engine.sh</span>
+          </div>
+
+          <div class="terminal-body">
+            <div class="prompt-tab-bar">
+              <button class="prompt-tab active" data-tab="cot">Chain-of-Thought</button>
+              <button class="prompt-tab" data-tab="system">System Framing</button>
+              <button class="prompt-tab" data-tab="code">Autonomous Agent</button>
+            </div>
+
+            <div class="prompt-display">
+              <pre id="promptCode"><code><span class="tag">[SYSTEM]</span> You are an autonomous Senior Principal Strategist.
+<span class="tag">[CONTEXT]</span> Multi-market product expansion with zero marginal cost.
+<span class="tag">[DIRECTIVE]</span> Formulate a 3-stage validation loop:
+  1. Adversarial risk stress-testing
+  2. Recursive logic verification
+  3. Execution roadmap formatted in JSON Schema.
+<span class="tag">[OUTPUT SPEC]</span> Deterministic, zero-hallucination, high entropy.</code></pre>
+            </div>
+
+            <div class="terminal-footer">
+              <div class="output-status">
+                <span class="status-indicator"></span> Output Confidence: <strong>99.84%</strong>
+              </div>
+              <button class="btn-copy" id="copyPromptBtn">Copy Hazra Prompt</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Supported Models & Ecosystem -->
+  <section class="ecosystem-section" id="tools">
+    <div class="container">
+      <div class="eco-banner">
+        <span>Trained on latest models:</span>
+        <span class="eco-pill">Claude 3.5 Sonnet</span>
+        <span class="eco-pill">GPT-4o & o1</span>
+        <span class="eco-pill">DeepSeek R1</span>
+        <span class="eco-pill">Midjourney v6.1</span>
+        <span class="eco-pill">LangChain & CrewAI</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Curriculum Accordion -->
+  <section class="section" id="curriculum">
+    <div class="container">
+      <div class="section-title text-center">
+        <span class="eyebrow">CURRICULUM ROADMAP</span>
+        <h2>Master The Complete AI Operating System</h2>
+        <p class="subtitle">8 structured modules taking you from prompt basics to self-directed AI agents.</p>
+      </div>
+
+      <div class="accordion-container">
+        <div class="acc-card active">
+          <div class="acc-header">
+            <div class="acc-meta">
+              <span class="mod-pill">MODULE 01</span>
+              <h3>Core Prompt Architecture & Attention Mechanisms</h3>
+            </div>
+            <span class="acc-btn">−</span>
+          </div>
+          <div class="acc-content">
+            <p>Understand how Transformer tokens attend to prompt weights. Eliminate hallucinations through structural constraints.</p>
+            <ul>
+              <li>Tokenization, temperature parameters, top_p, and frequency penalties</li>
+              <li>Role Prompting vs Few-Shot Exemplar injections</li>
+              <li>Delimiter protocols (XML tagging, JSON anchoring)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="acc-card">
+          <div class="acc-header">
+            <div class="acc-meta">
+              <span class="mod-pill">MODULE 02</span>
+              <h3>Advanced Reasoning: Chain-of-Thought (CoT) & Tree of Thoughts</h3>
+            </div>
+            <span class="acc-btn">+</span>
+          </div>
+          <div class="acc-content">
+            <p>Force language models to perform multi-stage mathematical and strategic deliberations before responding.</p>
+            <ul>
+              <li>Self-Consistency prompting and verification cycles</li>
+              <li>Tree-of-Thoughts (ToT) branching logic for high-stakes problem solving</li>
+              <li>Adversarial red-teaming your own prompt outputs</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="acc-card">
+          <div class="acc-header">
+            <div class="acc-meta">
+              <span class="mod-pill">MODULE 03</span>
+              <h3>Midjourney v6.1 & Visual Generative Prompts</h3>
+            </div>
+            <span class="acc-btn">+</span>
+          </div>
+          <div class="acc-content">
+            <p>Generate photorealistic commercial photography, brand assets, and 3D mockups on demand.</p>
+            <ul>
+              <li>Lighting setups: Volumetric, rim lighting, 35mm Hasselblad aesthetics</li>
+              <li>Style references (--sref) and Character consistency parameters (--cref)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="acc-card">
+          <div class="acc-header">
+            <div class="acc-meta">
+              <span class="mod-pill">MODULE 04</span>
+              <h3>Autonomous AI Agents & Make.com / n8n Automation</h3>
+            </div>
+            <span class="acc-btn">+</span>
+          </div>
+          <div class="acc-content">
+            <p>Build 24/7 automated agents that research, summarize, generate reports, and draft emails without human intervention.</p>
+            <ul>
+              <li>Connecting Claude/OpenAI APIs to WhatsApp, Gmail & Google Sheets</li>
+              <li>Error-handling and recursive fallbacks in production workflows</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="section" id="pricing">
+    <div class="container narrow">
+      <div class="section-title text-center">
+        <span class="eyebrow">ENROLLMENT</span>
+        <h2>Invest In High-Leverage AI Skills</h2>
+        <p class="subtitle">Learn skills that save you 20+ hours every single week.</p>
+      </div>
+
+      <div class="pricing-box">
+        <div class="pricing-glow"></div>
+        <div class="pricing-content">
+          <div class="badge-top">LIFETIME ACCESS</div>
+          <h3 class="plan-name">Hazra Prompt Complete Pass</h3>
+          <div class="price-row">
+            <span class="currency">৳</span>
+            <span class="val">5,900</span>
+            <span class="one-time">One-Time Fee</span>
+          </div>
+          <p class="plan-summary">Immediate access to all 8 modules, the 10,000+ prompt library, and private VIP AI community.</p>
+
+          <div class="features-checklist">
+            <div class="check-item">✓ 8 Comprehensive Video Modules (30+ Hours)</div>
+            <div class="check-item">✓ Exclusive Hazra Prompt Vault (10,000+ Verified Prompts)</div>
+            <div class="check-item">✓ Midjourney Commercial Prompt Mastery & Cheatsheets</div>
+            <div class="check-item">✓ Autonomous AI Agent & n8n Blueprint Templates</div>
+            <div class="check-item">✓ Monthly Model Upgrade Sessions (GPT-5 & Beyond)</div>
+            <div class="check-item">✓ Official Hazra Prompt AI Certificate</div>
+          </div>
+
+          <button class="btn btn-neon btn-block open-modal-btn" data-plan="Hazra Prompt Complete Pass - ৳5,900">
+            Join Hazra Prompt Masterclass
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container narrow">
+      <div class="section-title text-center">
+        <span class="eyebrow">FAQ</span>
+        <h2>Answers to Common Questions</h2>
+      </div>
+
+      <div class="accordion-container">
+        <div class="acc-card">
+          <div class="acc-header">
+            <h3>Do I need coding knowledge to learn Prompt Engineering?</h3>
+            <span class="acc-btn">+</span>
+          </div>
+          <div class="acc-content">
+            <p>No! Prompt engineering is primarily written in natural language. We teach both non-technical operators and developers how to steer AI models effectively.</p>
+          </div>
+        </div>
+
+        <div class="acc-card">
+          <div class="acc-header">
+            <h3>Are the prompts updated as new models release?</h3>
+            <span class="acc-btn">+</span>
+          </div>
+          <div class="acc-content">
+            <p>Yes, all course members receive continuous lifetime access to updated prompt vaults whenever Anthropic, OpenAI, or Midjourney push new model updates.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-box">
+      <div class="brand">
+        <span class="ai-orb"></span>
+        <span class="brand-text">HAZRA <span class="neon-highlight">PROMPT</span></span>
+      </div>
+      <p class="copyright">&copy; 2026 Hazra Prompt. All rights reserved. Built for AI Pioneers.</p>
+    </div>
+  </footer>
+
+  <!-- Enrollment Modal -->
+  <div class="modal-backdrop" id="enrollModal">
+    <div class="modal-shell">
+      <button class="modal-exit" id="closeModal">&times;</button>
+      <div class="modal-inner">
+        <span class="eyebrow">HAZRA PROMPT ADMISSION</span>
+        <h3 id="modalPlanName">Secure Your Enrollment</h3>
+        <p class="modal-notice">Enter your WhatsApp and payment information to receive prompt access instantly.</p>
+
+        <form id="hazraForm">
+          <div class="field">
+            <label for="hzName">Full Name</label>
+            <input type="text" id="hzName" placeholder="e.g. Arif Hazra" required>
+          </div>
+          <div class="field">
+            <label for="hzEmail">Email Address</label>
+            <input type="email" id="hzEmail" placeholder="name@domain.com" required>
+          </div>
+          <div class="field">
+            <label for="hzPhone">WhatsApp Contact</label>
+            <input type="tel" id="hzPhone" placeholder="+880 1XXXXXXXXX" required>
+          </div>
+          <div class="field">
+            <label>Payment Gateway</label>
+            <div class="pay-options-grid">
+              <label class="pay-tag">
+                <input type="radio" name="hzPay" value="bKash" checked>
+                <span>bKash</span>
+              </label>
+              <label class="pay-tag">
+                <input type="radio" name="hzPay" value="Nagad">
+                <span>Nagad</span>
+              </label>
+              <label class="pay-tag">
+                <input type="radio" name="hzPay" value="Bank Card">
+                <span>Card / Bank</span>
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-neon btn-block">Confirm Enrollment</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
