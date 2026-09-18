@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dola 30s Studio Pro</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo-box">
+        <img src="icon.png" alt="Logo" class="logo-img">
+        <div>
+          <h1 class="title">Dola 30s Studio</h1>
+          <p class="subtitle">Seedance 2.5 Video Unlocker</p>
+        </div>
+      </div>
+      <span class="version-badge">v1.0</span>
+    </header>
+
+    <!-- Status Card -->
+    <div class="status-card">
+      <div class="status-indicator">
+        <span class="pulse-dot"></span>
+        <span id="connection-status">Extension Ready</span>
+      </div>
+      <span class="model-badge">Seedance 2.5</span>
+    </div>
+
+    <!-- Main Controls -->
+    <section class="controls-section">
+      <h2 class="section-title">Generation Features</h2>
+
+      <div class="control-row">
+        <div class="control-info">
+          <label class="control-label" for="popup-direct30s">Direct 30s API Unlock</label>
+          <span class="control-sub">Injects 30s in Seedance payload</span>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="popup-direct30s" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="control-row">
+        <div class="control-info">
+          <label class="control-label" for="popup-autoextend">Auto-Extend Chaining</label>
+          <span class="control-sub">Auto-clicks Extend (10s ➔ 30s)</span>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="popup-autoextend" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="control-row">
+        <div class="control-info">
+          <label class="control-label" for="popup-autodownload">Auto Download 30s</label>
+          <span class="control-sub">Saves video when 30s finishes</span>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="popup-autodownload">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </section>
+
+    <!-- Batch Prompt Section -->
+    <section class="batch-section">
+      <div class="batch-header">
+        <h2 class="section-title">Batch Prompt Automation</h2>
+        <span class="batch-count" id="prompt-count">0 Prompts</span>
+      </div>
+      <textarea id="batch-prompts-input" placeholder="Enter prompts (one per line)...&#10;Prompt 1: Cyberpunk city aerial view...&#10;Prompt 2: Lion walking in savannah sunset..."></textarea>
+      <button class="btn-primary" id="btn-start-batch">🚀 Send Next Prompt to Dola</button>
+    </section>
+
+    <!-- Footer Links -->
+    <footer class="footer">
+      <a href="https://www.dola.com/chat" target="_blank" class="link-btn">🌐 Open Dola.com</a>
+      <span class="copyright">Earnify Studio / Antigravity Mode</span>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

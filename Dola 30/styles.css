@@ -1,0 +1,309 @@
+/* ==========================================================================
+   Dola AI 30s Studio Pro - Stylesheet
+   Glassmorphism UI, Custom Badges, Floating Studio Widget, and Toast System
+   ========================================================================== */
+
+/* 1. Custom Injected 30s Option inside Dola's Native Dropdown */
+.dola-30s-injected-item {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 8px 14px !important;
+  margin: 3px 0 !important;
+  border-radius: 8px !important;
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  color: #10b981 !important;
+  background: rgba(16, 185, 129, 0.08) !important;
+  border: 1px solid rgba(16, 185, 129, 0.25) !important;
+}
+
+.dola-30s-injected-item:hover {
+  background: rgba(16, 185, 129, 0.18) !important;
+  border-color: #10b981 !important;
+  transform: translateX(2px) !important;
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.3) !important;
+}
+
+.dola-30s-injected-item.active {
+  background: #10b981 !important;
+  color: #ffffff !important;
+  border-color: #10b981 !important;
+}
+
+.dola-30s-injected-badge {
+  font-size: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 2px 6px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* 2. Floating Studio Widget Container */
+#dola-30s-studio-widget {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999999;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #f3f4f6;
+  width: 310px;
+  background: rgba(15, 17, 26, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(99, 102, 241, 0.35);
+  border-radius: 16px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45), 0 0 24px rgba(99, 102, 241, 0.2);
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+}
+
+#dola-30s-studio-widget.minimized {
+  width: auto;
+  border-radius: 30px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+#dola-30s-studio-widget.minimized .studio-body {
+  display: none !important;
+}
+
+/* Header */
+.studio-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.18), rgba(168, 85, 247, 0.12));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+}
+
+.studio-title-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.studio-icon {
+  font-size: 18px;
+  filter: drop-shadow(0 0 8px rgba(99, 102, 241, 0.8));
+}
+
+.studio-title {
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  background: linear-gradient(90deg, #a5b4fc, #c084fc, #34d399);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.studio-tag {
+  font-size: 9px;
+  background: rgba(16, 185, 129, 0.2);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  padding: 1px 6px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.studio-toggle-btn {
+  background: transparent;
+  border: none;
+  color: #9ca3af;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.studio-toggle-btn:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Body */
+.studio-body {
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Feature Row & Toggle */
+.studio-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.studio-row-label {
+  display: flex;
+  flex-direction: column;
+}
+
+.studio-row-title {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #e5e7eb;
+}
+
+.studio-row-desc {
+  font-size: 10.5px;
+  color: #9ca3af;
+  margin-top: 1px;
+}
+
+/* Modern Switch Toggle */
+.studio-switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.studio-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.studio-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #374151;
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.studio-slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+input:checked + .studio-slider {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  border-color: #818cf8;
+}
+
+input:checked + .studio-slider:before {
+  transform: translateX(18px);
+}
+
+/* Progress Section */
+.studio-progress-box {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.studio-progress-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+.studio-progress-status {
+  font-weight: 600;
+  color: #a5b4fc;
+}
+
+.studio-progress-bar-bg {
+  width: 100%;
+  height: 6px;
+  background: #1f2937;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.studio-progress-bar-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #6366f1, #34d399);
+  border-radius: 3px;
+  transition: width 0.4s ease;
+}
+
+/* 3. Toast Notifications */
+#dola-toast-container {
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10000000;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  pointer-events: none;
+}
+
+.dola-toast {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  background: rgba(17, 24, 39, 0.95);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 30px;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 500;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  animation: dolaToastIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transition: all 0.3s;
+}
+
+.dola-toast.info {
+  border-color: #6366f1;
+  box-shadow: 0 0 16px rgba(99, 102, 241, 0.3);
+}
+
+.dola-toast.success {
+  border-color: #10b981;
+  box-shadow: 0 0 16px rgba(16, 185, 129, 0.3);
+}
+
+.dola-toast.warning {
+  border-color: #f59e0b;
+  box-shadow: 0 0 16px rgba(245, 158, 11, 0.3);
+}
+
+@keyframes dolaToastIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
